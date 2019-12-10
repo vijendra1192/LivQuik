@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MnZ-1O-xfu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="5KV-CP-Cju">
+            <objects>
+                <viewController id="byA-ng-Lf9" customClass="ViewController" customModule="LivQuik" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPy-EX-MEg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP4-fD-5Ep">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lP4-fD-5Ep" firstAttribute="centerX" secondItem="dPy-EX-MEg" secondAttribute="centerX" id="3W2-dS-3uh"/>
+                            <constraint firstItem="lP4-fD-5Ep" firstAttribute="centerY" secondItem="dPy-EX-MEg" secondAttribute="centerY" id="TAh-px-0yr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kdl-eE-Nav"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8fC-LF-iFq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nyM-KL-4bI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.79710144927537" y="100.44642857142857"/>
+        </scene>
+        <!--DashboardVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardVC" id="BYZ-38-t0r" customClass="DashboardVC" customModule="LivQuik" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MGz-Pt-g5D">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1co-aq-zXC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlV-5d-qCd">
+                                        <rect key="frame" x="0.0" y="758" width="414" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Pyg-ba-QpZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MGz-Pt-g5D" secondAttribute="trailing" id="EHC-mG-xj9"/>
+                            <constraint firstItem="MGz-Pt-g5D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SFx-7p-fhb"/>
+                            <constraint firstItem="MGz-Pt-g5D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a0L-38-pxI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MGz-Pt-g5D" secondAttribute="bottom" id="zwH-0y-xBU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="102.45535714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RFx-H8-4LN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MnZ-1O-xfu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="crK-MG-BWd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="byA-ng-Lf9" kind="relationship" relationship="rootViewController" id="HIJ-2k-IZb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5od-EQ-8el" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-704.34782608695662" y="100.44642857142857"/>
         </scene>
     </scenes>
 </document>
