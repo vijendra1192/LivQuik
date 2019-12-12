@@ -8,26 +8,6 @@
 
 import Foundation
 
-class ResponseError {
-    var type: ApiResponseError
-    var error: Error
-    
-    init(error: Error, type: ApiResponseError) {
-        self.error = error
-        self.type = type
-    }
-}
-
-enum ApiResponseError {
-    case notFound
-    case noData
-}
-
-enum Result<T, ResponseError> {
-    case success(T)
-    case failure(ResponseError)
-}
-
 class ApiRequestManager {
     
     private let dataTask = URLSession.shared
@@ -51,23 +31,41 @@ class ApiRequestManager {
     
     public func makeNewsApiCall(pageNo: Int, completionBlock: @escaping (Result<Codable, ResponseError>) -> Void) {
         
-        guard let url = URL(string: "https://newsapi.org/v2/everything?apiKey=7df0496730464bbda3d7aa76f337dac3&q=b&page=1") else {
+        guard let url = URL(string: "https://newsapi.org/v2/everything?apiKey=7df0496730464bbda3d7aa76f337dac3&q=b&page=\(pageNo)") else {
             return
         }
         
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            guard let data = data else {
-                let error = ResponseError(error: error!, type: .noData)
+            guard let data = data, let response = response as? HTTPURLResponse else {
+                let error = ResponseError(type: .unknownError)
                 completionBlock(Result.failure(error))
                 return
             }
             
-            do {
-                let decoder = JSONDecoder()
-                let json = try decoder.decode(NewsData.self, from: data)
-                completionBlock(Result.success(json))
-            } catch {
+            switch response.statusCode {
+            case 200:
+                do {
+                    let decoder = JSONDecoder()
+                    let json = try decoder.decode(News.self, from: data)
+                    DispatchQueue.main.async {
+                        completionBlock(Result.success(json))
+                    }
+                } catch {}
+                break
+            
+            case 426:
+                DispatchQueue.main.async {
+                    let error = ResponseError(type: .maximumLimitReached)
+                    completionBlock(Result.failure(error))
+                }
+                break
                 
+            default:
+                DispatchQueue.main.async {
+                    let error = ResponseError(type: .unknownError)
+                    completionBlock(Result.failure(error))
+                }
+                break
             }
         })
         task.resume()

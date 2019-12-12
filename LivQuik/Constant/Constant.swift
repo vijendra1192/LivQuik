@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ # Responsibility - Only constant variable will be declared here
+* This class is only responsible to have constant data
+*/
 class Constant {
     private static let APIKEY = "7df0496730464bbda3d7aa76f337dac3"
 }

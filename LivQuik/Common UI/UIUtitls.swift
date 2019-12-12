@@ -8,7 +8,9 @@
 
 import Foundation
 import UIKit
-
+/**
+# Responsibility - This one is builder design pattern i.e create and reuse its UI
+*/
 class UIUtitls {
     class func createViewController(storyBoardName name: String, withIdentifier: String) -> UIViewController {
         let storyboard = UIStoryboard(name: name, bundle: nil)

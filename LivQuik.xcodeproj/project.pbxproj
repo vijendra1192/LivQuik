@@ -3,16 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0D7DCB562D44C231B46515 /* Pods_LivQuik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F0C0C4FCAC90E4EBD57631 /* Pods_LivQuik.framework */; };
+		525E2FBCDA2AAEF42E7C5E84 /* Pods_LivQuikTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146177322C665D99D409AC81 /* Pods_LivQuikTests.framework */; };
 		E547E631239FC1680009358D /* ApiRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E547E630239FC1680009358D /* ApiRequestManager.swift */; };
 		E547E634239FD8220009358D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E547E633239FD8220009358D /* Constant.swift */; };
 		E547E636239FE2DC0009358D /* Newsdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = E547E635239FE2DC0009358D /* Newsdata.swift */; };
+		E547E638239FEC0F0009358D /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E547E637239FEC0F0009358D /* Pagination.swift */; };
 		E56AF5BA239FB51E001F0EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56AF5B9239FB51E001F0EAB /* AppDelegate.swift */; };
 		E56AF5BC239FB51E001F0EAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56AF5BB239FB51E001F0EAB /* SceneDelegate.swift */; };
-		E56AF5BE239FB51E001F0EAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56AF5BD239FB51E001F0EAB /* ViewController.swift */; };
 		E56AF5C1239FB51E001F0EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56AF5BF239FB51E001F0EAB /* Main.storyboard */; };
 		E56AF5C3239FB51F001F0EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56AF5C2239FB51F001F0EAB /* Assets.xcassets */; };
 		E56AF5C6239FB51F001F0EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56AF5C4239FB51F001F0EAB /* LaunchScreen.storyboard */; };
@@ -25,6 +27,8 @@
 		E56AF5EB239FB5F5001F0EAB /* DashboardTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56AF5EA239FB5F5001F0EAB /* DashboardTVCell.xib */; };
 		E56AF5ED239FB610001F0EAB /* DashboardTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56AF5EC239FB610001F0EAB /* DashboardTVCell.swift */; };
 		E56AF5F0239FB89A001F0EAB /* UIUtitls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56AF5EF239FB89A001F0EAB /* UIUtitls.swift */; };
+		E5E4115023A022E700209971 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4114F23A022E700209971 /* ResponseError.swift */; };
+		E5E4115223A02A8A00209971 /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5E4115123A02A8A00209971 /* ReadMe.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +42,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1259794C99B3FA8BA8C19182 /* Pods-LivQuik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivQuik.release.xcconfig"; path = "Target Support Files/Pods-LivQuik/Pods-LivQuik.release.xcconfig"; sourceTree = "<group>"; };
+		146177322C665D99D409AC81 /* Pods_LivQuikTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LivQuikTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F0C0C4FCAC90E4EBD57631 /* Pods_LivQuik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LivQuik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE14E668DCD01B0A0A66AD7 /* Pods-LivQuikTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivQuikTests.release.xcconfig"; path = "Target Support Files/Pods-LivQuikTests/Pods-LivQuikTests.release.xcconfig"; sourceTree = "<group>"; };
+		85A0CAA8A982C7272A8BC649 /* Pods-LivQuik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivQuik.debug.xcconfig"; path = "Target Support Files/Pods-LivQuik/Pods-LivQuik.debug.xcconfig"; sourceTree = "<group>"; };
+		D09CCC3478F9D76CACAD9C8B /* Pods-LivQuikTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivQuikTests.debug.xcconfig"; path = "Target Support Files/Pods-LivQuikTests/Pods-LivQuikTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E547E630239FC1680009358D /* ApiRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestManager.swift; sourceTree = "<group>"; };
 		E547E633239FD8220009358D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		E547E635239FE2DC0009358D /* Newsdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Newsdata.swift; sourceTree = "<group>"; };
+		E547E637239FEC0F0009358D /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		E56AF5B6239FB51E001F0EAB /* LivQuik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivQuik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56AF5B9239FB51E001F0EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E56AF5BB239FB51E001F0EAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E56AF5BD239FB51E001F0EAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E56AF5C0239FB51E001F0EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E56AF5C2239FB51F001F0EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E56AF5C5239FB51F001F0EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +70,8 @@
 		E56AF5EA239FB5F5001F0EAB /* DashboardTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTVCell.xib; sourceTree = "<group>"; };
 		E56AF5EC239FB610001F0EAB /* DashboardTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTVCell.swift; sourceTree = "<group>"; };
 		E56AF5EF239FB89A001F0EAB /* UIUtitls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtitls.swift; sourceTree = "<group>"; };
+		E5E4114F23A022E700209971 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		E5E4115123A02A8A00209971 /* ReadMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0D7DCB562D44C231B46515 /* Pods_LivQuik.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +87,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525E2FBCDA2AAEF42E7C5E84 /* Pods_LivQuikTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A066C01445DD15AA66271A0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18F0C0C4FCAC90E4EBD57631 /* Pods_LivQuik.framework */,
+				146177322C665D99D409AC81 /* Pods_LivQuikTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B63B8BF6C85A3DFCD8E48937 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85A0CAA8A982C7272A8BC649 /* Pods-LivQuik.debug.xcconfig */,
+				1259794C99B3FA8BA8C19182 /* Pods-LivQuik.release.xcconfig */,
+				D09CCC3478F9D76CACAD9C8B /* Pods-LivQuikTests.debug.xcconfig */,
+				6EE14E668DCD01B0A0A66AD7 /* Pods-LivQuikTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E547E62D239FC1210009358D /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E547E630239FC1680009358D /* ApiRequestManager.swift */,
+				E5E4114F23A022E700209971 /* ResponseError.swift */,
 			);
 			path = "Api Request";
 			sourceTree = "<group>";
@@ -119,6 +154,8 @@
 				E56AF5B8239FB51E001F0EAB /* LivQuik */,
 				E56AF5CF239FB520001F0EAB /* LivQuikTests */,
 				E56AF5B7239FB51E001F0EAB /* Products */,
+				B63B8BF6C85A3DFCD8E48937 /* Pods */,
+				A066C01445DD15AA66271A0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,15 +171,15 @@
 		E56AF5B8239FB51E001F0EAB /* LivQuik */ = {
 			isa = PBXGroup;
 			children = (
+				E5E4115123A02A8A00209971 /* ReadMe.rtf */,
 				E547E632239FD8140009358D /* Constant */,
 				E547E62D239FC1210009358D /* Network */,
 				E56AF5EE239FB885001F0EAB /* Common UI */,
 				E56AF5DB239FB540001F0EAB /* UI */,
 				E56AF5B9239FB51E001F0EAB /* AppDelegate.swift */,
 				E56AF5BB239FB51E001F0EAB /* SceneDelegate.swift */,
-				E56AF5BD239FB51E001F0EAB /* ViewController.swift */,
-				E56AF5BF239FB51E001F0EAB /* Main.storyboard */,
 				E56AF5C2239FB51F001F0EAB /* Assets.xcassets */,
+				E56AF5BF239FB51E001F0EAB /* Main.storyboard */,
 				E56AF5C4239FB51F001F0EAB /* LaunchScreen.storyboard */,
 				E56AF5C7239FB51F001F0EAB /* Info.plist */,
 			);
@@ -192,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				E56AF5EF239FB89A001F0EAB /* UIUtitls.swift */,
+				E547E637239FEC0F0009358D /* Pagination.swift */,
 			);
 			path = "Common UI";
 			sourceTree = "<group>";
@@ -203,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E56AF5D5239FB520001F0EAB /* Build configuration list for PBXNativeTarget "LivQuik" */;
 			buildPhases = (
+				E56647F77403EAFFFB6EC04C /* [CP] Check Pods Manifest.lock */,
 				E56AF5B2239FB51E001F0EAB /* Sources */,
 				E56AF5B3239FB51E001F0EAB /* Frameworks */,
 				E56AF5B4239FB51E001F0EAB /* Resources */,
+				645ED73D64CEE30B200CAD84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E56AF5D8239FB520001F0EAB /* Build configuration list for PBXNativeTarget "LivQuikTests" */;
 			buildPhases = (
+				E025C1D7C9DB56D5AC5CE252 /* [CP] Check Pods Manifest.lock */,
 				E56AF5C8239FB520001F0EAB /* Sources */,
 				E56AF5C9239FB520001F0EAB /* Frameworks */,
 				E56AF5CA239FB520001F0EAB /* Resources */,
@@ -280,6 +321,7 @@
 				E56AF5C6239FB51F001F0EAB /* LaunchScreen.storyboard in Resources */,
 				E56AF5C3239FB51F001F0EAB /* Assets.xcassets in Resources */,
 				E56AF5EB239FB5F5001F0EAB /* DashboardTVCell.xib in Resources */,
+				E5E4115223A02A8A00209971 /* ReadMe.rtf in Resources */,
 				E56AF5C1239FB51E001F0EAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +335,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		645ED73D64CEE30B200CAD84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LivQuik/Pods-LivQuik-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LivQuik/Pods-LivQuik-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LivQuik/Pods-LivQuik-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E025C1D7C9DB56D5AC5CE252 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LivQuikTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E56647F77403EAFFFB6EC04C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LivQuik-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E56AF5B2239FB51E001F0EAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E56AF5E8239FB5B8001F0EAB /* DashboardProtocols.swift in Sources */,
-				E56AF5BE239FB51E001F0EAB /* ViewController.swift in Sources */,
 				E56AF5E2239FB597001F0EAB /* DashboardPresenter.swift in Sources */,
+				E547E638239FEC0F0009358D /* Pagination.swift in Sources */,
 				E56AF5DF239FB581001F0EAB /* DashboardVC.swift in Sources */,
 				E547E631239FC1680009358D /* ApiRequestManager.swift in Sources */,
 				E56AF5E6239FB5AA001F0EAB /* DashboardRouter.swift in Sources */,
@@ -311,6 +417,7 @@
 				E56AF5E4239FB5A0001F0EAB /* DashboardInteractor.swift in Sources */,
 				E56AF5ED239FB610001F0EAB /* DashboardTVCell.swift in Sources */,
 				E547E634239FD8220009358D /* Constant.swift in Sources */,
+				E5E4115023A022E700209971 /* ResponseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +575,7 @@
 		};
 		E56AF5D6239FB520001F0EAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85A0CAA8A982C7272A8BC649 /* Pods-LivQuik.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +593,7 @@
 		};
 		E56AF5D7239FB520001F0EAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1259794C99B3FA8BA8C19182 /* Pods-LivQuik.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +611,7 @@
 		};
 		E56AF5D9239FB520001F0EAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09CCC3478F9D76CACAD9C8B /* Pods-LivQuikTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +633,7 @@
 		};
 		E56AF5DA239FB520001F0EAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE14E668DCD01B0A0A66AD7 /* Pods-LivQuikTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

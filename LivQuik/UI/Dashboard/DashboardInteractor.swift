@@ -9,13 +9,13 @@
 import Foundation
 
 class DashboardInteractor: DashboardInteractorInputProtocol {
-    var presenter: DashboardInteractorOutputProtocol?
+    weak var presenter: DashboardInteractorOutputProtocol?
     
-    func newsDetails() {
-        ApiRequestManager.shared().makeNewsApiCall(pageNo: 2) {[weak self] (response) in
+    func newsDetails(pageNo: Int) {
+        ApiRequestManager.shared().makeNewsApiCall(pageNo: pageNo) {[weak self] (response) in
             switch response {
             case .success(let response):
-                let news = response as? NewsData
+                let news = response as? News
                 self?.presenter?.retrieveNewsData(response: news)
                 break
                 

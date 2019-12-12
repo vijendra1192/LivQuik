@@ -9,23 +9,53 @@
 import Foundation
 
 class DashboardPresenter: DashboardPresenterProtocol {
-    var view: DashboardVCProtocol?
+    weak var view: DashboardVCProtocol?
     var interactor: DashboardInteractorInputProtocol?
     var router: DashboardRouterProtocol?
     
+    var pagination: Pagination<Articles> = Pagination(pageSize: 20)
+    
     func viewDidLoad() {
-        interactor?.newsDetails()
+        pagination.reset()
+        getNewsData()
+    }
+    
+    func reset() {
+        pagination.reset()
+    }
+    
+    func getNewsData() {
+        if pagination.isLoading {
+            return
+        }
+        pagination.start()
+        
+        if pagination.data.count == 0 {
+//            view?.showLoading(message: R.string.localizable.alertLoaderPlease_wait())
+        } else {
+            view?.showFooterView(isHidden: false)
+        }
+        interactor?.newsDetails(pageNo: pagination.page)
+    }
+    
+    func willDisplayCell(at index: Int) {
+        if pagination.canLoadNow(index: index) {
+            getNewsData()
+        }
     }
 }
 
 extension DashboardPresenter: DashboardInteractorOutputProtocol {
-    func retrieveNewsData(response: NewsData?) {
+    func retrieveNewsData(response: News?) {
         guard let data = response else {
             return
         }
+        pagination.success(objects: data.articles)
+        view?.showNewsData(data: pagination.data)
+        print("total page count is \(pagination.data.count)")
     }
     
     func onErrorView(response: ResponseError) {
-
+        view?.showFooterView(isHidden: true)
     }
 }
